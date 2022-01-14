@@ -1,0 +1,667 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Montserrat:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    width: 1px;
+}
+
+::-webkit-scrollbar-track{
+    background: #fff;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #ffce00;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: #ce8e00;
+}
+
+section{
+    padding: 100px 0;
+}
+
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+.home, .nice-info, .size-chart, .isi, footer{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nice-info, .nice-content,
+.size-chart, .size-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 200px;
+    height: 3px;
+    background: #000;
+    transform: translateX(-50%);
+}
+
+section .title::after{
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    font-size: 20px;
+    font-weight: 700;
+    left: 50%;
+    padding: 0 5px;
+    color: #00ffce;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+/* navbar styling */
+.navbar{
+    position: fixed;
+    padding: 30px 0;
+    width: 100%;
+    z-index: 999;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky{
+    padding: 15px 0;
+    background: #00ffce;
+}
+
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a{
+    color: #fff;
+    font-family: 'Piximisa', sans-serif;
+    font-size: 45px;
+    font-weight: 800;
+    
+    border: none;
+}
+
+.navbar.sticky .logo a{
+    color: black;
+    text-shadow: none;
+}
+
+.navbar .logo span{
+    color: #00ffce;
+    
+}
+
+.navbar.sticky .logo span{
+    color: #fff;
+    text-shadow: none;
+}
+
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a{
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+
+.navbar.sticky .menu li a{
+    color: black;
+}
+
+.navbar .menu li a:hover{
+    color: #00ffce;
+}
+
+.navbar.sticky .menu li a:hover{
+    color: #fff;
+}
+
+/* menu butt */
+.menu-butt{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar.sticky .menu-butt{
+    color: #000;
+}
+
+.scroll-up-butt{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: #00ffce;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #000;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.scroll-up-butt.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* home styling */
+
+.home{
+    display: flex;
+    background: #ea44cb;
+    background: linear-gradient(135deg, rgba(0,0,0,1) 30%, rgba(0,0,0,1) 70%, rgba(0,233,191,0.9) 100%);
+    height: 100vh;
+    color: white;
+    min-height: 500px;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.home .max-width{
+    width: 100%;
+    display: flex;
+}
+.home .max-width .row{
+    margin-right: 0;
+}
+
+.home .home-content .text1{
+    font-size: 50px;
+    color: #fff;
+    font-weight: 700;
+    margin-left: -1px;
+    
+}
+
+.home .home-content .text1 span{
+    color: #fff;
+}
+
+.home .home-content .text2{
+    font-size: 75px;
+    font-weight: 700;
+    margin-left: -1px;
+    text-shadow: 0px 0px 7px #00ffce;
+}
+
+.home .home-content .text3{
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    margin: 5px 5px;
+    color: #00ffce;
+    
+}
+
+/* Nice info styling */
+.nice-info .nice-content .card{
+    width: calc(25% - 20px);
+    background: #00ffce;
+    text-align: center;
+    border-radius: 6px;
+    padding: 50px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.nice-info .title::after{
+    content: "Wajib Baca!!!";
+}
+
+.nice-info .nice-content .card:hover{
+    background: #dddddd;
+}
+
+.nice-info .nice-content .card .box{
+    transition: all 0.3s ease;
+}
+
+.nice-info .nice-content .card:hover .box{
+    transform: scale(1.05);
+}
+
+.nice-info .nice-content .card i{
+    font-size: 50px;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.nice-info .nice-content .card:hover i{
+    color: #000;
+}
+
+.nice-info .nice-content .card .text{
+    font-size: 25px;
+    font-weight: 700;
+    margin: 10px 0 7px 0;
+}
+
+.nice-info .nice-content .card p{
+    text-align: center;
+}
+
+.nice-info .nice-content .card p a:hover{
+    color: #00ffce;
+}
+
+.nice-info .nice-content .card p .info{
+    color: #00896f;
+}
+
+/* size chart styling */
+.size-chart{
+    background: #000;
+    color: #fff;
+}
+
+.size-chart .title{
+    color: #fff;
+}
+
+.size-chart .title::after{
+    content: "Fit your body!";
+    background: #000;
+    font-weight: 400;
+}
+
+.size-chart .title::before{
+    background: #fff;
+}
+
+.size-chart .size-content .left{
+    width: 25%;
+    padding-right: 400px;
+}
+
+.size-chart .size-content .left img{
+    height: 250px;
+    width: 400px;
+    object-fit: cover;
+}
+
+.size-chart .size-content .right{
+    font-size: 30px;
+    margin-bottom: 10px;
+    width: 55%;
+    padding-left: 80px;
+}
+
+.size-chart .size-content .right table{
+    border-collapse: collapse;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    
+}
+
+.size-chart .size-content .right table td{
+    border: 1.5px solid #00ffce;
+    text-align: center;
+}
+
+
+
+.size-chart .size-content .right table tr:first-child td{
+    border-top: 0;
+    
+}
+
+.size-chart .size-content .right table tr td:first-child{
+    border-left: 0;
+    
+}
+
+.size-chart .size-content .right table tr:last-child td{
+    border-bottom: 0;
+    
+}
+
+.size-chart .size-content .right table tr td:last-child{
+    border-right: 0;
+    
+}
+
+/* form styling */
+.isi{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    padding: 10px;
+    align-items: center;
+    background: #fff;
+    
+}
+.isi .wrapper{
+    padding: 25px 30px;
+    max-width: 850px;
+    width: 100%;
+    background: #000;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.wrapper .head{
+    font-size: 40px;
+    position: relative;
+    font-weight: 700;
+    color: #00ffce;
+}
+
+.wrapper .head::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    border-radius: 5px;
+    background: #fff;
+}
+
+::selection{
+    background: #00ffce;
+    color: #000 ;
+}
+
+
+.wrapper form .data{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+
+form .data .field{
+    height: 50px;
+    width: calc(100% / 2 - 20px);
+    margin-top: 20px;
+    position: relative;
+}
+
+form .data .field input, form .data .field select{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    outline-color: #00ffce;
+    font-size: 17px;
+    border-radius: 5px;
+    padding-left: 15px;
+    background: #000;
+    color: #FFF;
+    border: 1.5px solid #00ffce;
+    transition: all 0.3s ease;
+}
+
+.wrapper form .data .field label{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 17px;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    background: #000;
+}
+
+.wrapper form .data .field input:focus~label ,form .data .field input:valid~label,
+.wrapper form .data .field select:focus~label,form .data .field select:valid~label{
+    top: 0%;
+    font-size: 16px;
+    
+    color: #00ffce;
+    background: #000;
+    transform: translateY(-50%);    
+}
+
+form .bacaduls{
+    display: flex;
+    width: 100%;
+    height: 20px;
+    font-size: 16px;
+    align-items: center;
+    padding-bottom: 5px;
+    justify-content: space-between;
+    color: #fff;
+}
+
+form .bacaduls .checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form .bacaduls input{
+    width: 15px;
+    height: 15px;
+    background: red;
+}
+form .bacaduls label{
+    user-select: none;
+    padding-left: 5px;
+}
+form .bacaduls .belum a{
+    color: #fff;
+    pointer-events: auto;
+}
+
+form .bacaduls .belum a:hover{
+    color: #00ffce;
+}
+
+form .butt{
+    height: 45px;
+    margin: 35px 0;
+}
+
+form .butt input{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    color: #000;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #00ffce;
+}
+
+form .butt input:active{
+    background: #fff;
+    transform: scale(0.95);
+}
+
+form .butt input:hover{
+    transform: scale(1.003);
+    transition: all 0.1s ease;
+    color: #FFF;
+}
+
+/* responsive */
+@media(max-width: 1104px){
+    .size-chart .size-content .left img{
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media(max-width: 991px) {
+    .max-width{
+        padding: 0 50px;
+    }
+}
+
+@media(max-width: 947px){
+    .menu-butt{
+        display: block;
+        z-index: 9999;
+    }
+
+    .menu-butt i.active::before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #000;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home .home-content .text2{
+        font-size: 70px;
+    }
+    .home .home-content .text3{
+        font-size: 35px;
+    }
+    .max-width{
+        max-width: 930px;
+    }
+    .size-chart .size-content .column{
+        width: 100%;
+    }
+    .size-chart .size-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+        padding: 0;
+    }
+    .size-chart .size-content .right{
+        padding-left: 0;
+        flex: 100%;
+    }
+    .nice-info .nice-content .card{
+        width: calc(100% - 10px);
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width: 500px){
+    .home .home-content .text2{
+        font-size: 50px;
+    }
+    .home .home-content .text3{
+        font-size: 27px;
+    }
+    .size-chart .size-content .left{
+        max-width: 500px;
+    }
+}
+
+@media(max-width: 584px){
+    .wrapper{
+        max-width: 100%;
+    }
+    form .data .field{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    
+    .form-content form .data{
+        max-height: 100px;
+        overflow-y: scroll;
+        
+    }
+    .data ::-webkit-scrollbar{
+        width: 0.3px;
+    }
+    form .data .field input, form .data .field select{
+        font-size: 12px;
+    }
+    .wrapper form .data .field label{
+        font-size: 12px;
+    }
+    .wrapper form .data .field input:focus~label ,form .data .field input:valid~label,
+    .wrapper form .data .field select:focus~label,form .data .field select:valid~label{
+        font-size: 12px;
+    }
+    form .bacaduls{
+        font-size: 12px;
+    }
+    .size-chart .size-content .left img{
+        height: 200px;
+        width: 200px;
+    }
+    section .title::after{
+        font-size: 13px;
+    }
+}
+
+/* footer styling */
+
+footer{
+    background: #000;
+    padding: 15px 23px;
+    color: #00ffce;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
