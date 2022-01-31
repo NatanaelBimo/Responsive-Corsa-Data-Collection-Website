@@ -1,12 +1,12 @@
 //Unique Firebase Object
 var firebaseConfig = {
-    apiKey: "AIzaSyBHBAp81B7TK2c4Y5cz7JvtZjmj-WWLyrI",
-    authDomain: "korsafindit2022.firebaseapp.com",
-    projectId: "korsafindit2022",
-    storageBucket: "korsafindit2022.appspot.com",
-    messagingSenderId: "399886237211",
-    appId: "1:399886237211:web:472e577e24d736f07002be",
-    databaseURL: "https://korsafindit2022-default-rtdb.asia-southeast1.firebasedatabase.app/"
+    apiKey: "",
+    authDomain: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: "",
+    databaseURL: ""
   };
   
   //Initialize Firebase 
