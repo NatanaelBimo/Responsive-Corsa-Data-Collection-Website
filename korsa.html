@@ -7,7 +7,7 @@
     <style type="text/css">
         @font-face {
             font-family: "Piximisa";
-            src: url(D:\Font\piximisa\Piximisa.ttf) format("truetype");
+            src: url(Piximisa.ttf) format("truetype");
         }
         p.piximisa{
             font-family: "Piximisa", sans-serif;
@@ -57,11 +57,13 @@
             <h2 class="title">Nice Info</h2>
             <div class="nice-content">
                 <div class="card">
-                    <div class="box">
-                        <i class="fas fa-clipboard-list"></i>
-                        <div class="text">Isi Data</div>
-                        <p>Isi data di bawah ini. Data yang dipakai adalah data yang terakhir dimasukkan.</p>
-                    </div>
+                    <a href="#isi">
+                        <div class="box">
+                            <i class="fas fa-clipboard-list"></i>
+                            <div class="text">Isi Data</div>
+                            <p>Isi data di bawah ini. Data yang dipakai adalah data yang terakhir dimasukkan.</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="card">
                     <div class="box">
@@ -100,8 +102,8 @@
                     <table>
                         <tr>
                             <td>Size</td>
-                            <td>P(cm)</td>
                             <td>L(cm)</td>
+                            <td>P(cm)</td>
                             <td>PL(cm)</td>
                         </tr>
                         <tr>
@@ -215,7 +217,7 @@
                             <div class="belum"><a href="#nice-info">Belum?</a></div>
                         </div>
                         <div class="butt">
-                            <input type="submit" value="Kumpul">
+                            <input type="submit" id="submit" value="Kumpul">
                         </div>
                     </form>
                 </div>
@@ -230,5 +232,33 @@
     </footer>
     
     <script src="korsa-script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <!-- <script src="firebase-deploy.js"></script> -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.3/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.3/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyBHBAp81B7TK2c4Y5cz7JvtZjmj-WWLyrI",
+          authDomain: "korsafindit2022.firebaseapp.com",
+          projectId: "korsafindit2022",
+          storageBucket: "korsafindit2022.appspot.com",
+          messagingSenderId: "399886237211",
+          appId: "1:399886237211:web:472e577e24d736f07002be",
+          measurementId: "G-L3LTP92G58"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+    <script src="form-data-realtime.js"></script>
 </body>
 </html>
