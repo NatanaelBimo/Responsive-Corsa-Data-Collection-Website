@@ -59,9 +59,12 @@
                 <div class="card">
                     <a href="#isi">
                         <div class="box">
-                            <i class="fas fa-clipboard-list"></i>
-                            <div class="text">Isi Data</div>
-                            <p>Isi data di bawah ini. Data yang dipakai adalah data yang terakhir dimasukkan.</p>
+                            <div class="front">
+                                <i class="fas fa-clipboard-list"></i>
+                                <div class="text">Isi Data</div>
+                                <p>Isi data di bawah ini. Data yang dipakai adalah data yang terakhir dimasukkan.</p>
+                            </div>
+                            <div class="back"></div>
                         </div>
                     </a>
                 </div>
@@ -69,23 +72,51 @@
                     <div class="box">
                         <i class="fas fa-pencil-ruler"></i>
                         <div class="text">Fiksasi Desain</div>
-                        <p>Akan dilakukan pemilihan desain yang diajukan oleh multimedia.</p>
+                        <p>Klik-klik manja untuk melihat desain fiksnya yaaa...</p>
+                        <span>Lorem ipsum </span>
+                    </div>
+                    <div class="popup">
+                        <div class="popup-card">
+                            
+                            <div class="popupimg">
+                                <img src="korsa .png" alt="">
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="card">
                     <div class="box">
-                        <i class="fas fa-money-bill-wave"></i>
-                        <div class="text">Pembayaran</div>
-                        <p>Pembayaran ke bendahara hehehe. Jangan sampe telat ya xixixixi.</p>
+                        <div class="container">
+                            <div class="front">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <div class="text">Pembayaran</div>
+                                <p>Pembayaran ke bendahara hehehe. Jangan sampe telat ya xixixixi.</p>
+                            </div>
+                            <div class="back">
+                                <h2>Contact Person</h2>
+                                <p>farizi (Fariz A)</p>
+                                <p>habib (Rizqi)</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="card">
                     <div class="box">
-                        <i class="fas fa-shipping-fast"></i>
-                        <div class="text">Pengiriman</div>
-                        <p>Korsa akan dikirimkan ke alamat yang kalian isi, sistemnya cash on delivery.</p>
+                        <div class="container">
+                            <div class="front">
+                                <i class="fas fa-shipping-fast"></i>
+                                <div class="text">Pengiriman</div>
+                                <p>Korsa akan dikirimkan ke alamat yang kalian isi, sistemnya cash on delivery.</p>
+                            </div>
+                            <div class="back">
+                                <h2>Alternatif</h2>
+                                <p>Terdapat opsi untuk pengambilan secara pribadi.</p>
+                                <p>Info lebih lanjut hubungi: natanaelbp25 (Momo)</p>
+                            </div>
+                        </div>
                     </div>
                 </div>  
+                
             </div>
         </div>
     </section>
@@ -185,7 +216,7 @@
                                 <label for="divisi">Divisi</label>
                             </div>
                             <div class="field">
-                                <input type="text" name="" id="nama-korsa" placeholder="Pet Ju" required>
+                                <input type="text" name="" id="nama-korsa" maxlength="15" placeholder="Pet Ju" required>
                                 <label for="nama-korsa">Nama Korsa</label>
                             </div>
                             <div class="field">
@@ -197,6 +228,8 @@
                                     <option value="xl">XL</option>
                                     <option value="xxl">XXL</option>
                                     <option value="xxxl">XXXL</option>
+                                    <option value="4xl">4XL</option>
+                                    <option value="5xl">5XL</option>
                                 </select>
                                 <label for="ukuran">Ukuran</label>
                             </div>
