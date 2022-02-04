@@ -32,4 +32,11 @@ $(document).ready(function(){
         $(".navbar .menu").removeClass("active");
         $('.menu-butt i').removeClass("active");
     });
+
+    $('.card:nth-child(2)').click(function(){
+        $('.card .popup').toggleClass("active");
+    });
+
+    
 });
+
