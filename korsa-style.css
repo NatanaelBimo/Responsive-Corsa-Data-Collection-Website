@@ -239,6 +239,7 @@ section .title::after{
 /* Nice info styling */
 .nice-info .nice-content .card{
     width: calc(25% - 20px);
+    height: auto;
     background: #00ffce;
     text-align: center;
     border-radius: 6px;
@@ -258,6 +259,9 @@ section .title::after{
 
 .nice-info .nice-content .card .box{
     transition: all 0.3s ease;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 2px;
 }
 
 .nice-info .nice-content .card:hover .box{
@@ -296,45 +300,7 @@ section .title::after{
     visibility: hidden;
 }
 
-.nice-content .card:nth-child(3),
-.nice-content .card:last-child{
-    perspective: 1000px;
-}
 
-.nice-content .card:nth-child(3) .box,
-.nice-content .card:last-child .box{
-    
-    padding: 50px 25px;
-}
-
-.nice-content .card:nth-child(3) .container,
-.nice-content .card:last-child .container{
-    position: absolute;
-    
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-}
-
-.nice-content .card:nth-child(3):hover .container,
-.nice-content .card:last-child:hover .container{
-    transform: rotateY(180deg);
-}
-
-.nice-content .card:nth-child(3) .container .front,
-.nice-content .card:nth-child(3) .container .back,
-.nice-content .card:last-child .container .front,
-.nice-content .card:last-child .container .back{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-
-.nice-content .back{
-    transform: rotateY(180deg);
-}
 /* popup */
 
 .card .popup{
@@ -369,14 +335,70 @@ section .title::after{
     width: 800px;
     height: 500px;
     margin: 20px;
+    align-items: center;
 }
 
 .popup .popup-card img{
     width: 100%;
 }
 
+.popup .popup-card .popupcontent{
+    width: 100%;
+}
 
+.card .popup-outer{
+    display: flex;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 255, 206, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: scale(1.2);
+    transition: opacity 0.2s 0s ease-in-out, transform 0.2s 0s ease-in-out;
+}
 
+.card:nth-child(4) .popup-outer.active{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: scale(1);
+}
+
+.card:nth-child(3) .popup-outer.active{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: scale(1);
+}
+
+.card .popup-box{
+    position: relative;
+    display: flex;
+    background: #00ffce;
+    border-radius: 12px;
+    padding: 30px;
+    width: 300px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.card:nth-child(4) .popup-box .popup-content p:last-child{
+    font-weight: 700;
+}
 /* size chart styling */
 .size-chart{
     background: #000;
