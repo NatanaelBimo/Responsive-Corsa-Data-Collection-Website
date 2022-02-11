@@ -36,6 +36,13 @@ $(document).ready(function(){
     $('.card:nth-child(2)').click(function(){
         $('.card .popup').toggleClass("active");
     });
+    
+    $('.card:nth-child(3)').click(function(){
+        $('.card:nth-child(3) .popup-outer').toggleClass("active");
+    });
+    $('.card:nth-child(4)').click(function(){
+        $('.card:nth-child(4) .popup-outer').toggleClass("active");
+    });
 
     
 });
