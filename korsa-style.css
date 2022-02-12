@@ -399,6 +399,12 @@ section .title::after{
 .card:nth-child(4) .popup-box .popup-content p:last-child{
     font-weight: 700;
 }
+
+.card:nth-child(3) .popup-box .popup-content p:last-child,
+.card:nth-child(3) .popup-box .popup-content p:nth-child(5),
+.card:nth-child(3) .popup-box .popup-content p:nth-child(4){
+    font-weight: 700;
+}
 /* size chart styling */
 .size-chart{
     background: #000;
